@@ -494,6 +494,8 @@ th.name-h:before {
 }
 .menu-container ul li {
     list-style: none;
+    position: relative;
+    z-index: 99;
 }
 .menu-container ul li a {
     color: #fff;
