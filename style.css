@@ -56,6 +56,10 @@ a:focus,
 h1 {
     font-family: "FiraSans-Medium";
 }
+.container-fluid{
+    padding-left: 20px;
+    padding-right: 20px;
+}
 .head-logo {
     width: 341px;
     height: 65px;
@@ -74,6 +78,7 @@ h1 {
     width: 310px;
     float: right;
     margin-top: 17px;
+    position: relative;
 }
 #searchform input {
     width: 100%;
@@ -91,9 +96,10 @@ h1 {
 }
 #searchform label {
     position: absolute;
-    top: 27px;
+    top: 10px;
     margin-left: 12px;
     color: #ababab;
+    left: 0;
 }
 .search-dpopdown-list {
     display: none;
@@ -142,6 +148,8 @@ h1 {
     padding: 2px 9px;
     margin-top: 18px;
     margin-left: 10px;
+    margin-right: 0;
+    padding-right: 0;
 }
 .nav-btn .icon-bar {
     background: #000;
@@ -258,6 +266,7 @@ h1 {
 .bootstrap-select .dropdown-toggle:focus {
     outline: none !important;
 }
+
 .filter-area .left .dropdown-toggle {
     border: none;
     width: auto;
@@ -329,14 +338,22 @@ h1 {
     font-size: 16px;
     color: #5c9fd4;
 }
-.filter-area nav.nav-filter span {
-    padding-top: 5px;
+.home .filter-area nav.nav-filter a span:hover{
+text-decoration: underline !important;
+}
+.filter-area nav.nav-filter a{
     display: inline-block;
     height: 100%;
     width: 105px;
     text-align: center;
 }
-.filter-area nav.nav-filter span:first-child {
+.filter-area nav.nav-filter span {
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+    padding-top: 5px;
+}
+.filter-area nav.nav-filter a:first-child span {
     border-right: 1px solid #ccc;
 }
 .filter-area .search-filter,
@@ -374,22 +391,38 @@ table th {
     padding-top: 13px;
     padding-bottom: 13px;
 }
-.volume-h {
+th.name-h{
+    position: relative;
+    padding-left: 20px;
+    background-color: #eee;
+}
+th.name-h:before {
+    font-family: "fontawesome";
+    content: "\f0dd";
+    font-size: 14px;
+    position: absolute;
+    left: 7px;
+    top: 32%;
+}
+.main-table td.graph {
+    text-align: center;
+}
+.main-table .volume-h {
     width: 14%;
 }
-.supply-h {
+.main-table .supply-h {
     width: 14%;
 }
-.num-h,
-.num {
+.main-table .num-h,
+.main-table .num {
     font-size: 14px;
     text-align: center;
     width: 5%;
     padding-right: 0;
 }
-.price,
-.supply,
-.volume {
+.main-table .price,
+.main-table .supply,
+.main-table .volume {
     color: #5c9fd4;
 }
 .green {
@@ -759,18 +792,183 @@ table th {
 	background: #5c9fd4;
 	text-decoration: none;
 }
+.converter .filters .bs-caret{
+    background: #bfbfbf;
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    color: #fff;
+}
+@media (min-width: 992px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+  }
+}
+.crypto .currency-converner-head-btn .fa,
+.converter .currency-converner-head-btn .fa{
+    display: none;
+}
+.crypto .currency-converner-head-btn,
+.converter .currency-converner-head-btn{
+    text-align: center;
+    padding-left: 0;
+}
+.converter .top-info h2{
+    font-size: 32px;
+    font-family: "FiraSans-Medium";
+    color: #3a3a3a;
+}
+.converter .top-info{
+    color: #3a3a3a;
+    font-size: 14px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+.converter .top-info p a{   
+  color: #3a3a3a;
+  border-bottom: 1px solid;
+}
+.converter .top-info p a:hover{   
+    text-decoration: none;
+    border-bottom: none;
+}
+.blue{
+    color: #5c9fd4;
+}
+.converter .main-info h1{
+    font-size: 120px !important;
+    font-family: "FiraSans-Medium";
+    color: #3a3a3a;
+}
+.converter .main-info h1 .top-num{
+    font-size: 22px;
+    position: absolute;
+    text-align: left;
+    width: 200px;
+    top: -30px;
+    left: 4px;
+}
+.converter .main-info{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.converter .main-info .first{
+    display: inline-block;
+    position: relative;
+}
+.converter .filters .bootstrap-select{
+    width: 100% !important;    
+}
+.converter .filters .action{
+    text-align: center;
+    padding-top: 8px;
+}
+.converter .filters .action a{
+    border-bottom: 1px solid;
+}
+.converter .filters .action a:hover{
+    text-decoration: none;
+    border-bottom: none;
+}
+.converter .filters .dropdown-menu > li > a:hover, 
+.converter .filters .dropdown-menu > li > a:focus{
+    background-color: #f9f9f9;
+}
+.converter .filters .btn-default:hover{
+    background-color: transparent;
+}
+.converter .filters input{
+    box-shadow: none;
+    transition: 0s;
+}
+.converter .filters input:hover{
+    border-color: #8c8c8c;
+}
+.converter .date{
+    color: #3a3a3a;
+    text-align: right;
+    margin-top: 100px;
+}
+.converter .date h2{
+    font-size: 32px;
+    font-family: "FiraSans-Light";
+}
+.items-currency-bottom{
+    margin-bottom: 50px;
+}
+.items-currency-bottom .item{
+    background-color: #eeeeee;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    margin-bottom: 25px;
+}
+.items-currency-bottom .item h4{
+    margin-bottom: 0;
+    font-family: "FiraSans-Medium";
+}
+.items-currency-bottom .item p{
+    margin-bottom: -7px;
+}
+.items-currency-bottom .item span{
+    color: #3a3a3a;
+    font-size: 12px;
+    font-family: "FiraSans-Light";
+}
+.mob{
+    display: none;
+}
 
 
 
 
-
-
-
-
-
+@media screen and (max-width: 991px){
+    .filter-area .right{
+        justify-content: flex-start;
+    }
+    #searchform{
+        width: 280px;
+    }
+    table th:nth-child(3){
+        width: 17%;
+    }
+    thead{
+        font-size: 18px;
+    }
+    table{
+        font-size: 16px;
+    }
+    .items-currency-bottom .col-sm-4:last-child{
+        display: none;
+    }
+    .exchange-pairs th.iso{
+        width: 5%;
+    }
+    .exchange-pairs th.name {
+        width: 8%;
+    }
+    .exchange-pairs th.rate {
+        width: 5%;
+    }
+    .exchange-pairs td.url{
+        padding-right: 15px;
+    }
+}
 
 
 @media screen and (max-width: 767px) {
+    #searchform{
+        float: none;
+    }
+    .nav-btn{
+        margin-top: -39px;
+    }
     table {
         border: 0;
     }
@@ -788,15 +986,16 @@ table th {
         width: 1px;
     }
     table tr {
-        border-bottom: 3px solid #ddd;
+        background: #f7f6f6;
         display: block;
-        margin-bottom: .625em;
+        margin-bottom: 30px;
     }
     table td {
         border-bottom: 1px solid #ddd;
         display: block;
-        font-size: .8em;
         text-align: right;
+        padding-right: 15px;
+        padding-left: 15px;
     }
     table td:before {
         content: attr(data-label);
@@ -807,4 +1006,190 @@ table th {
     table td:last-child {
         border-bottom: 0;
     }
+    .main-table .num-h, .main-table .num {
+        width: 100%;
+        text-align: right;
+        padding-right: 15px;
+    }
+    .main-table .name{
+        border-top: 1px solid #ddd;
+    }
+    .main-table .num,
+    .main-table .graph,
+    .main-table .volume,
+    .main-table .supply,
+    .main-table .marketcup{
+        display: none;
+    }
+    .home .filter-area{
+        padding: 0;
+        margin-bottom: 50px;
+    }
+    .home .filter-area .right .dropdown-toggle,
+    .home .filter-area .left .dropdown-toggle{
+        width: 100%;
+    }
+    .home .filter-area #search_filter_input.form-control,
+    .home .filter-area .search-filter, 
+    .home .filter-area .currency-selector,
+    .home .filter-area .btn-group{
+        width: 100% !important;
+        margin-right: 0;
+    }
+    .home .filter-area #search_filter_input.form-control{
+        margin-top: 15px;
+    }
+    .home .filter-area .search-filter .glyphicon{
+        top:15px;
+    }
+    .home .form-group{
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    .home .filter-area .left .dropdown-toggle{
+        border:  1px solid #ccc;
+        margin-bottom: 15px;
+    }
+    .home .nav-filter a{
+        width: 105px;  
+    }
+    .home .filter-area nav.nav-filter{
+        text-align: center;
+        width: 100%;
+    }
+    .home .filter-area nav.nav-filter  a{
+        width: 49%;
+    }
+    .home .filter-area .left .btn-default:active, .filter-area .left .btn-default.active, .filter-area .left .open > .dropdown-toggle.btn-default{
+        border: 1px solid #ccc !important;
+    }
+    .home .filter-area .right .dropdown-toggle{
+        height: 39px;
+    }
+    .head-logo{
+        width: 200px;
+        height: 50px;
+        padding-top: 10px;
+        font-size: 20px;
+        top: 7px;
+        position: relative; 
+    }
+    #searchform{
+        width: 200px;
+        position: relative;
+    }
+    .search-dpopdown-list{
+        width: 95%;
+    }
+    .currency-converner-head-btn{
+        width: 200px;
+        margin-top: 10px;
+    }
+    .menu-container ul li a:hover .arrow{
+        display: none;
+    }
+    .menu-mask{
+        height: auto;
+    }
+    .menu-footer{
+        position: relative;
+        margin-top: 40px;
+    }
+    .menu-footer .date{
+        text-align: left;
+    }
+    .menu-container .nav ul li a,
+    .menu-container ul li a{
+        margin-bottom: 5px;
+    }
+    .converter .main-info h1{
+        font-size: 70px !important;
+        margin-top: 60px;
+    }
+    .bootstrap-select>.dropdown-toggle{
+        margin-bottom: 15px;
+    }
+    .currency-tags > .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .currency-tags a{
+        padding: 0 5px;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    .currency-details .price{
+        font-size: 70px;
+        text-align: center;
+        display: block;
+    }
+    .currency-details .buy-btn a{
+        float: none;
+        margin: 0 auto;
+    }
+    .currency-details .currency-name{
+        text-align: center;
+    }
+    .currency-details .item{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .currency-details .item:last-child{
+        width: 100%;
+    }
+    .currency-details .links .col-xs-12{
+        margin-bottom: 10px;
+    }
+    .currency-details .grow.green{
+        display: block;
+        text-align: center;
+    }
+    .exchange-pairs .line{
+        display: none;
+    }
+    .exchange-pairs.container{
+        margin-top: 0;
+    }
+    .desk{
+        display: none;
+    }
+    .mob{
+        display: block;
+    }
+    .exchange-pairs table a{
+        border-bottom: none;
+    }
+    h1, .h1 {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+    .world-currencies-table td.name{
+        padding-left: 15px;
+    }
+    .world-currencies-table .bank-name,
+    .world-currencies-table .bank-site,
+    .world-currencies-table .unit,
+    .world-currencies-table .cent,
+    .world-currencies-table .coin,
+    .world-currencies-table .banknotes{
+        display: none;
+    }
+    #searchform label{
+        top: 10px;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
