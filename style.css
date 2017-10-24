@@ -135,6 +135,7 @@ h1 {
 .search-dpopdown-list li {
     list-style: none;
     border-bottom: 1px solid #fff;
+    cursor: pointer;
 }
 .search-dpopdown-list li:last-child{
     border-bottom: none;
@@ -147,10 +148,11 @@ h1 {
     padding-left: 10px;
     padding-top: 13px;
     padding-bottom: 13px;
+    cursor: pointer;
 }
 .search-dpopdown-list li a:hover {
     background-color: #5c9fd4;
-    cursor: default;
+    cursor: pointer;
     text-decoration: none;
 }
 .search-act{
