@@ -834,6 +834,9 @@ th.name-h:before {
     color: #fff;
 }
 @media (min-width: 992px) {
+    .menu-mask {
+        height: auto;
+    }
   .seven-cols .col-md-1,
   .seven-cols .col-sm-1,
   .seven-cols .col-lg-1 {
