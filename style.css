@@ -103,13 +103,14 @@ h1 {
 }
 .search-dpopdown-list {
     display: none;
-    background: #444444;
+    background: #333;
     margin-top: 3px;
-    border-radius: 5px;
+    border-radius: 0px;
     color: #fff;
-    width: 310px;
+    width: 100%;
     position: absolute;
     z-index: 9;
+    opacity: 0.95;
 }
 .search-dpopdown-list .currency-block {
     border-bottom: 1px solid #505050;
@@ -123,9 +124,14 @@ h1 {
 }
 .search-dpopdown-list ul {
     padding: 0;
+    margin-bottom: 0;
 }
 .search-dpopdown-list li {
     list-style: none;
+    border-bottom: 1px solid #fff;
+}
+.search-dpopdown-list li:last-child{
+    border-bottom: none;
 }
 .search-dpopdown-list li a {
     font-size: 16px;
@@ -133,14 +139,20 @@ h1 {
     display: inline-block;
     width: 100%;
     padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 3px;
+    padding-top: 13px;
+    padding-bottom: 13px;
     cursor: default;
 }
 .search-dpopdown-list li a:hover {
     background-color: #5c9fd4;
     cursor: default;
     text-decoration: none;
+}
+.search-act{
+    position: absolute !important;
+    right: 0;
+    width: 100% !important;
+    transition: 0.3s;
 }
 .nav-btn {
     float: right;
@@ -171,6 +183,7 @@ h1 {
     color: #fff;
     cursor: pointer;
     text-decoration: none;
+    background-color: #5c9fd4;
 }
 .currency-converner-head-btn .fa {
     margin-right: 5px;
@@ -821,7 +834,7 @@ th.name-h:before {
     text-align: center;
     padding-left: 0;
 }
-.converter .top-info h2{
+.converter .top-info h1{
     font-size: 32px;
     font-family: "FiraSans-Medium";
     color: #3a3a3a;
@@ -843,12 +856,12 @@ th.name-h:before {
 .blue{
     color: #5c9fd4;
 }
-.converter .main-info h1{
+.converter .main-info .big-num{
     font-size: 120px !important;
     font-family: "FiraSans-Medium";
     color: #3a3a3a;
 }
-.converter .main-info h1 .top-num{
+.converter .main-info .big-num .top-num{
     font-size: 22px;
     position: absolute;
     text-align: left;
@@ -1070,18 +1083,17 @@ th.name-h:before {
     }
     .head-logo{
         width: 200px;
-        height: 50px;
+        height: 45px;
         padding-top: 10px;
         font-size: 20px;
-        top: 7px;
+        top: 4px;
         position: relative; 
     }
     #searchform{
-        width: 200px;
+        width: 45px;
         position: relative;
-    }
-    .search-dpopdown-list{
-        width: 95%;
+        float: right;
+        margin-top: -41px;
     }
     .currency-converner-head-btn{
         width: 200px;
@@ -1104,7 +1116,7 @@ th.name-h:before {
     .menu-container ul li a{
         margin-bottom: 5px;
     }
-    .converter .main-info h1{
+    .converter .main-info .big-num{
         font-size: 70px !important;
         margin-top: 60px;
     }
@@ -1179,11 +1191,25 @@ th.name-h:before {
     }
     #searchform label{
         top: 10px;
+        left: 1px;
+    }
+    #searchform input{
+        border: none;
+        box-shadow: none;
+    }
+    .search-act input{
+        border: 1px solid #e8e8e8 !important;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04) !important;
     }
 
 }
 
-
+@media screen and (max-width: 359px){
+    .head-logo{
+        width: 160px;
+        font-size: 18px;
+    }
+}
 
 
 

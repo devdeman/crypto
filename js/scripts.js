@@ -12,13 +12,26 @@ jQuery(document).ready(function($) {
 	  e.stopPropagation();
 	});
 
+	$("#search_input").click(function() {
+	  $('#searchform').addClass('search-act');
+	});
+	$(document).on('click', function(e) {
+	  if (!$(e.target).closest("#search_input").length) {
+	    $('#searchform').removeClass('search-act');
+	  }
+	  e.stopPropagation();
+	});
+	
+	$(".search-dpopdown-list li a").click(function() {
+	  $('.search-dpopdown-list').toggle();
+	});
 
 	$(".search-col > button").click(function() {
-	  $('.menu-mask').slideToggle();
+	  $('.menu-mask').toggle().prependTo('body');
 	});
 	
 	$(".x").click(function() {
-	  $('.menu-mask').slideToggle();
+	  $('.menu-mask').toggle().appendTo('body');
 	});
 
 
