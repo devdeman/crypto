@@ -36,6 +36,9 @@ a:hover {
 a:focus,
 :focus {
     outline: none;
+    outline-offset: none;
+    color: #5c9fd4;
+    text-decoration: none;
 }
 ::-webkit-input-placeholder {
     color: lightgrey;
@@ -71,6 +74,7 @@ h1 {
     text-align: center;
     padding-top: 8px;
 }
+.menu-mask > a:hover,
 .logo-col a:hover {
     text-decoration: none;
 }
@@ -79,6 +83,8 @@ h1 {
     float: right;
     margin-top: 17px;
     position: relative;
+    transition: 0.5s ease-in;
+    margin-right: 60px;
 }
 #searchform input {
     width: 100%;
@@ -141,7 +147,6 @@ h1 {
     padding-left: 10px;
     padding-top: 13px;
     padding-bottom: 13px;
-    cursor: default;
 }
 .search-dpopdown-list li a:hover {
     background-color: #5c9fd4;
@@ -153,6 +158,11 @@ h1 {
     right: 0;
     width: 100% !important;
     transition: 0.3s;
+    margin-right: 0 !important;
+}
+.hide{
+    display: none;
+    transition: 0.5s;
 }
 .nav-btn {
     float: right;
@@ -162,6 +172,8 @@ h1 {
     margin-left: 10px;
     margin-right: 0;
     padding-right: 0;
+    position: absolute;
+    right: 15px;
 }
 .nav-btn .icon-bar {
     background: #000;
@@ -448,7 +460,7 @@ th.name-h:before {
     background: #444444;
     height: 100vh;
     margin-top: -6px;
-    display: none;
+    position: relative;
 }
 .menu-mask .head-logo {
     position: relative;
@@ -456,8 +468,8 @@ th.name-h:before {
     left: 15px;
 }
 .x {
-    display: block;
-    position: fixed;
+    display: none;
+    position: absolute;
     right: 20px;
     top: 20px;
     width: 42px;
@@ -905,7 +917,7 @@ th.name-h:before {
 .converter .filters input:hover{
     border-color: #8c8c8c;
 }
-.converter .date{
+.converter .filters .date{
     color: #3a3a3a;
     text-align: right;
     margin-top: 100px;
@@ -1190,16 +1202,20 @@ th.name-h:before {
         display: none;
     }
     #searchform label{
-        top: 10px;
-        left: 1px;
+        top: 0px;
+        left: -3px;
+        font-size: 32px;
+        cursor: pointer;
     }
     #searchform input{
         border: none;
         box-shadow: none;
+
     }
     .search-act input{
         border: 1px solid #e8e8e8 !important;
         box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04) !important;
+        padding-left: 50px !important;
     }
 
 }
@@ -1208,6 +1224,11 @@ th.name-h:before {
     .head-logo{
         width: 160px;
         font-size: 18px;
+    }
+    .currency-converner-head-btn{
+        width: 160px;
+        font-size: 14px;
+        padding-top: 8px;
     }
 }
 

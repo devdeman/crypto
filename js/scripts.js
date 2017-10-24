@@ -3,11 +3,11 @@ jQuery(document).ready(function($) {
 	//open-hide search dropdown
 
 	$("#search_input").click(function() {
-	  $('.search-dpopdown-list').toggle();
+	  $('.search-dpopdown-list').slideToggle().animate({'opacity': 1},100);;
 	});
 	$(document).on('click', function(e) {
 	  if (!$(e.target).closest("#searchform").length) {
-	    $('.search-dpopdown-list').hide();
+	    $('.search-dpopdown-list').fadeOut();
 	  }
 	  e.stopPropagation();
 	});
@@ -21,17 +21,19 @@ jQuery(document).ready(function($) {
 	  }
 	  e.stopPropagation();
 	});
-	
+
 	$(".search-dpopdown-list li a").click(function() {
 	  $('.search-dpopdown-list').toggle();
 	});
 
 	$(".search-col > button").click(function() {
-	  $('.menu-mask').toggle().prependTo('body');
+	  $('.menu-mask').prependTo('body');
+	  $('.x').show();
 	});
 	
 	$(".x").click(function() {
-	  $('.menu-mask').toggle().appendTo('body');
+	  $('.menu-mask').appendTo('body');
+	  $('.x').hide();
 	});
 
 
