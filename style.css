@@ -803,6 +803,7 @@ th.name-h:before {
  	background: #3a3a3a;
  	padding-top: 80px;
  	padding-bottom: 60px;
+    margin-bottom: -44px;
 }
 .currency-tags > .container{
 	width: 90%;
