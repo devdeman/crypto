@@ -1226,7 +1226,58 @@ th.name-h:before {
         box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04) !important;
         padding-left: 50px !important;
     }
-
+    .exchange-pairs table tr,
+    .world-currencies-table  table tr {
+        background: inherit;
+        margin-bottom: 0;
+        display: table;
+        width: 100%;
+    }
+    .exchange-pairs table thead,
+    .world-currencies-table table thead{
+        position: relative;
+    }
+    .exchange-pairs table td,
+    .world-currencies-table table td{
+        display: table-cell;
+        text-align: left;
+        padding-left: 0;
+    }
+    .exchange-pairs table td:before,
+    .world-currencies-table table td:before{
+        display: none;
+    }
+    .world-currencies-table .name,
+    .world-currencies-table .iso,
+    .world-currencies-table .symbol{
+        width: 33% !important;
+    }
+    .exchange-pairs thead {
+        background: #eee;
+    }
+    .exchange-pairs table td:last-child{
+        border-bottom: 1px solid #ddd;
+    }
+    .exchange-pairs table{
+        width: 100%;
+    }
+    .exchange-pairs{
+        padding: 0;
+    }
+    .exchange-pairs table .name,
+    .exchange-pairs table .iso,
+    .exchange-pairs table .rate{
+        width: 20% !important; 
+    }
+    .exchange-pairs .url{
+        width: 30% !important;
+    }
+    .exchange-pairs table .iso{
+        padding-left: 15px;
+    }
+    .exchange-pairs table .name{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 359px){
